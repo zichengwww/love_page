@@ -59,10 +59,13 @@
     <img src="bouquet.webp" alt="玫瑰花束" />
   </div>
 
-  <!-- 音乐播放按钮 -->
-<audio controls autoplay loop>
-  <source src="Yesterday_Once_More.mp3">
+<!-- 添加 id 属性 -->
+<audio id="background-music" loop>
+  <source src="Yesterday_Once_More.mp3" type="audio/mpeg">
+  您的浏览器不支持 audio 标签。
 </audio>
-  <button onclick="document.getElementById('background-music').play()">点击播放音乐</button>
+
+<!-- 按钮触发播放 -->
+<button onclick="document.getElementById('background-music').play()">点击播放音乐</button>
 </body>
 </html>

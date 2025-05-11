@@ -7,6 +7,13 @@
   <script>
     window.onload = function () {
       alert("亲爱的妈妈，母亲节快乐！感谢您一直以来的无私付出与爱！");
+      // 可选：等待用户点击后播放音乐
+      document.body.addEventListener('click', () => {
+        const audio = document.getElementById('background-music');
+        if (audio && audio.paused) {
+          audio.play().catch(err => console.log("播放失败：", err));
+        }
+      }, { once: true });
     }
   </script>
   <style>
@@ -59,13 +66,13 @@
     <img src="bouquet.webp" alt="玫瑰花束" />
   </div>
 
-<!-- 添加 id 属性 -->
-<audio id="background-music" loop>
-  <source src="Yesterday_Once_More.mp3" type="audio/mpeg">
-  您的浏览器不支持 audio 标签。
-</audio>
-
-<!-- 按钮触发播放 -->
-<button onclick="document.getElementById('background-music').play()">点击播放音乐</button>
+  <!-- 添加 id 属性 -->
+  <audio id="background-music" loop>
+    <source src="Yesterday_Once_More.mp3" type="audio/mpeg">
+    您的浏览器不支持 audio 标签。
+  </audio>
+  
+  <!-- 按钮触发播放 -->
+  <button onclick="document.getElementById('background-music').play()">点击播放音乐</button>
 </body>
 </html>

@@ -10,7 +10,7 @@
       // 可选：等待用户点击后播放音乐
       document.body.addEventListener('click', () => {
         const audio = document.getElementById('background-music');
-        if (audio && audio.paused) {
+        if (audio) {
           audio.play().catch(err => console.log("播放失败：", err));
         }
       }, { once: true });
